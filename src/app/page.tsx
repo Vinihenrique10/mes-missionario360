@@ -714,7 +714,7 @@ export default function Home() {
               </div>
 
               <a
-                href="https://pay.kiwify.com.br/xxxxx"
+                href="https://mm360.mycartpanda.com/checkout/210923064:1"
                 className="w-full block bg-terracotta text-bone font-sans font-bold text-sm tracking-wider uppercase py-4 px-6 text-center hover:bg-[#a04e2e] active:scale-[0.99] transition-all duration-300 rounded-[2px]"
               >
                 QUERO GARANTIR MINHA ESTRUTURA E OS BÔNUS AGORA
