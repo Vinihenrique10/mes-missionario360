@@ -62,9 +62,12 @@ export default function Home() {
           </div>
 
           <div className="flex justify-start mb-10">
-            <button className="bg-terracotta hover:bg-terracotta/90 text-[#F5F2EA] font-sans font-bold py-4 px-8 text-sm md:text-base tracking-widest transition-colors duration-200 shadow-md rounded-[2px] flex items-center justify-center">
+            <a 
+              href="#oferta"
+              className="bg-terracotta hover:bg-terracotta/90 text-[#F5F2EA] font-sans font-bold py-4 px-8 text-sm md:text-base tracking-widest transition-colors duration-200 shadow-md rounded-[2px] flex items-center justify-center inline-block"
+            >
               <span>QUERO ESTRUTURAR MISSÕES AGORA</span>
-            </button>
+            </a>
           </div>
 
           <div className="w-full bg-[#EAE6DD] border-l-4 border-terracotta p-5 mb-10 rounded-[2px] max-w-3xl">

@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${cinzel.variable} ${geist.variable} h-full antialiased`}
+      className={`${cinzel.variable} ${geist.variable} h-full antialiased scroll-smooth`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
