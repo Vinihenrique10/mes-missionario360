@@ -1,5 +1,6 @@
 import Image from "next/image";
 import FAQAccordion from "@/components/FAQAccordion";
+import { heroImageBase64 } from "@/components/HeroImageBase64";
 
 export default function Home() {
   const faqItems = [
@@ -55,14 +56,14 @@ export default function Home() {
           </p>
 
           <div className="w-full max-w-3xl mb-10">
-            <Image 
-              src="/image/mq8jqxcc-i49ad0.webp" 
+            <img 
+              src={heroImageBase64}
               alt="Mês Missionário" 
               width={1024}
               height={1024}
               className="w-full h-auto rounded-[2px] shadow-sm border border-charcoal/10"
-              priority={true}
-              unoptimized={true}
+              fetchPriority="high"
+              decoding="sync"
             />
           </div>
 
