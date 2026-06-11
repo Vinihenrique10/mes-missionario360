@@ -28,7 +28,7 @@ export default function Home() {
     },
     {
       question: "Quais as formas de pagamento?",
-      answer: "Você pode adquirir através de Cartão de Crédito (em até 12x), PIX (com aprovação imediata) ou Boleto Bancário.",
+      answer: "Você pode adquirir através de Cartão de Crédito (em até 6x), PIX (com aprovação imediata) ou Boleto Bancário.",
     },
   ];
 
@@ -699,14 +699,14 @@ export default function Home() {
                 </span>
                 <div className="flex items-baseline gap-2">
                   <span className="font-serif text-5xl font-extrabold text-bone">
-                    R$ 67,00
+                    R$ 27,00
                   </span>
                   <span className="font-sans text-xs text-sand/70">
                     à vista
                   </span>
                 </div>
                 <p className="font-sans text-xs text-sand/60 mt-1">
-                  ou em até 12x no cartão
+                  ou 6x de R$ 5,11 no cartão
                 </p>
               </div>
 
