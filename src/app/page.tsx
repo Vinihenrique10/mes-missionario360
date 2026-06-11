@@ -57,6 +57,8 @@ export default function Home() {
             <img 
               src="/image/mq8jqxcc-i49ad0.webp" 
               alt="Mês Missionário" 
+              width={1024}
+              height={1024}
               className="w-full h-auto rounded-[2px] shadow-sm border border-charcoal/10"
               fetchPriority="high"
               decoding="async"

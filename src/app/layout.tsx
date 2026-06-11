@@ -28,6 +28,7 @@ export default function RootLayout({
       className={`${cinzel.variable} ${geist.variable} h-full antialiased scroll-smooth`}
     >
       <head>
+        <link rel="preload" href="/image/mq8jqxcc-i49ad0.webp" as="image" fetchPriority="high" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
