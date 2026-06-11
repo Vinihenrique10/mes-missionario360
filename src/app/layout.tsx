@@ -33,7 +33,7 @@ export default function RootLayout({
       <head>
         <Script
           id="utmify-pixel"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               window.pixelId = "6a2a007dd1b06d9fda9a81f2";
@@ -47,7 +47,7 @@ export default function RootLayout({
         />
         <Script
           id="utmify-latest"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           src="https://cdn.utmify.com.br/scripts/utms/latest.js"
           data-utmify-prevent-xcod-sck=""
           data-utmify-prevent-subids=""
