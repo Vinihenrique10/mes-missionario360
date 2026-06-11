@@ -33,7 +33,10 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `
-  window.addEventListener('DOMContentLoaded', function() {
+  function loadTracking() {
+    if (window.utmifyLoaded) return;
+    window.utmifyLoaded = true;
+
     // Pixel Utmify
     window.pixelId = "6a2a007dd1b06d9fda9a81f2";
     var p = document.createElement("script");
@@ -50,7 +53,13 @@ export default function RootLayout({
     u.setAttribute("data-utmify-is-cartpanda", "");
     u.async = true;
     document.head.appendChild(u);
-  });
+  }
+
+  // Inject tracking after 2500ms OR immediately on first user interaction
+  setTimeout(loadTracking, 2500);
+  window.addEventListener('scroll', loadTracking, { once: true, passive: true });
+  window.addEventListener('touchstart', loadTracking, { once: true, passive: true });
+  window.addEventListener('mousemove', loadTracking, { once: true, passive: true });
 `,
           }}
         />

@@ -54,13 +54,14 @@ export default function Home() {
           </p>
 
           <div className="w-full max-w-3xl mb-10">
-            <img 
+            <Image 
               src="/image/mq8jqxcc-i49ad0.webp" 
               alt="Mês Missionário" 
               width={1024}
               height={1024}
               className="w-full h-auto rounded-[2px] shadow-sm border border-charcoal/10"
-              fetchPriority="high"
+              priority={true}
+              unoptimized={true}
             />
           </div>
 
