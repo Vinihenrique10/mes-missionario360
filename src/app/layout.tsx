@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cinzel, Geist } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const cinzel = Cinzel({
@@ -30,41 +31,33 @@ export default function RootLayout({
       className={`${cinzel.variable} ${geist.variable} h-full antialiased scroll-smooth`}
     >
       <head>
-        <script
+      </head>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <Script
+          id="utmify-pixel"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
-  function loadTracking() {
-    if (window.utmifyLoaded) return;
-    window.utmifyLoaded = true;
-
-    // Pixel Utmify
-    window.pixelId = "6a2a007dd1b06d9fda9a81f2";
-    var p = document.createElement("script");
-    p.src = "https://cdn.utmify.com.br/scripts/pixel/pixel.js";
-    p.async = true;
-    document.head.appendChild(p);
-
-    // UTMs Utmify
-    var u = document.createElement("script");
-    u.src = "https://cdn.utmify.com.br/scripts/utms/latest.js";
-    u.setAttribute("data-utmify-prevent-xcod-sck", "");
-    u.setAttribute("data-utmify-prevent-subids", "");
-    u.setAttribute("data-utmify-ignore-iframe", "");
-    u.setAttribute("data-utmify-is-cartpanda", "");
-    u.async = true;
-    document.head.appendChild(u);
-  }
-
-  // Inject tracking after 2500ms OR immediately on first user interaction
-  setTimeout(loadTracking, 2500);
-  window.addEventListener('scroll', loadTracking, { once: true, passive: true });
-  window.addEventListener('touchstart', loadTracking, { once: true, passive: true });
-  window.addEventListener('mousemove', loadTracking, { once: true, passive: true });
-`,
+              window.pixelId = "6a2a007dd1b06d9fda9a81f2";
+              var a = document.createElement("script");
+              a.setAttribute("async", "");
+              a.setAttribute("defer", "");
+              a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+              document.head.appendChild(a);
+            `,
           }}
         />
-      </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+        <Script
+          id="utmify-latest"
+          strategy="lazyOnload"
+          src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+          data-utmify-prevent-xcod-sck=""
+          data-utmify-prevent-subids=""
+          data-utmify-ignore-iframe=""
+          data-utmify-is-cartpanda=""
+        />
+      </body>
     </html>
   );
 }

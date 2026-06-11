@@ -1,3 +1,4 @@
+import Image from "next/image";
 import FAQAccordion from "@/components/FAQAccordion";
 
 export default function Home() {
