@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cinzel, Geist } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const cinzel = Cinzel({
@@ -29,7 +30,12 @@ export default function RootLayout({
     >
       <head>
         <link rel="preload" href="/image/mq8jqxcc-i49ad0.webp" as="image" fetchPriority="high" />
-        <script
+      </head>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <Script
+          id="utmify-pixel"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
   window.pixelId = "6a2a007dd1b06d9fda9a81f2";
@@ -41,17 +47,16 @@ export default function RootLayout({
 `,
           }}
         />
-        <script
+        <Script
+          id="utmify-latest"
           src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+          strategy="afterInteractive"
           data-utmify-prevent-xcod-sck=""
           data-utmify-prevent-subids=""
           data-utmify-ignore-iframe=""
           data-utmify-is-cartpanda=""
-          async
-          defer
-        ></script>
-      </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+        />
+      </body>
     </html>
   );
 }
