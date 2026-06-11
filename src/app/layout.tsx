@@ -31,6 +31,7 @@ export default function RootLayout({
       className={`${cinzel.variable} ${geist.variable} h-full antialiased scroll-smooth`}
     >
       <head>
+        <link rel="preload" as="image" href="/image/mq8jqxcc-i49ad0.webp" fetchPriority="high" />
       </head>
       <body className="min-h-full flex flex-col">
         {children}
