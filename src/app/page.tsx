@@ -61,7 +61,6 @@ export default function Home() {
               height={1024}
               className="w-full h-auto rounded-[2px] shadow-sm border border-charcoal/10"
               fetchPriority="high"
-              decoding="async"
             />
           </div>
 

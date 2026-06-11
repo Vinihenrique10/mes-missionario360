@@ -31,24 +31,27 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `
-  window.pixelId = "6a2a007dd1b06d9fda9a81f2";
-  var a = document.createElement("script");
-  a.setAttribute("async", "");
-  a.setAttribute("defer", "");
-  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-  document.head.appendChild(a);
+  window.addEventListener('DOMContentLoaded', function() {
+    // Pixel Utmify
+    window.pixelId = "6a2a007dd1b06d9fda9a81f2";
+    var p = document.createElement("script");
+    p.src = "https://cdn.utmify.com.br/scripts/pixel/pixel.js";
+    p.async = true;
+    document.head.appendChild(p);
+
+    // UTMs Utmify
+    var u = document.createElement("script");
+    u.src = "https://cdn.utmify.com.br/scripts/utms/latest.js";
+    u.setAttribute("data-utmify-prevent-xcod-sck", "");
+    u.setAttribute("data-utmify-prevent-subids", "");
+    u.setAttribute("data-utmify-ignore-iframe", "");
+    u.setAttribute("data-utmify-is-cartpanda", "");
+    u.async = true;
+    document.head.appendChild(u);
+  });
 `,
           }}
         />
-        <script
-          src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-          data-utmify-prevent-xcod-sck=""
-          data-utmify-prevent-subids=""
-          data-utmify-ignore-iframe=""
-          data-utmify-is-cartpanda=""
-          async
-          defer
-        ></script>
       </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
