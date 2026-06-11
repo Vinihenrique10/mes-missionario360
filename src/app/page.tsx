@@ -55,9 +55,11 @@ export default function Home() {
 
           <div className="w-full max-w-3xl mb-10">
             <img 
-              src="/image/mq8jqxcc-i49ad0.png" 
+              src="/image/mq8jqxcc-i49ad0.webp" 
               alt="Mês Missionário" 
               className="w-full h-auto rounded-[2px] shadow-sm border border-charcoal/10"
+              fetchPriority="high"
+              decoding="async"
             />
           </div>
 
@@ -117,7 +119,7 @@ export default function Home() {
               O MÉTODO FUNCIONA MESMO QUE...
             </h2>
             <div className="w-full mb-12">
-              <img src="/image/mq8k2x5v-tm7yjx.webp" alt="O método funciona mesmo que" className="w-full h-auto rounded-[2px] shadow-sm border border-charcoal/10 object-cover" />
+              <img loading="lazy" decoding="async" src="/image/mq8k2x5v-tm7yjx.webp" alt="O método funciona mesmo que" className="w-full h-auto rounded-[2px] shadow-sm border border-charcoal/10 object-cover" />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8">
@@ -157,7 +159,7 @@ export default function Home() {
                   O QUE É O MÊS MISSIONÁRIO 360?
                 </h2>
                 <div className="w-full mb-8">
-                  <img src="/image/mq8k4f5h-gnnta7.webp" alt="O que é o Mês Missionário 360" className="w-full h-auto rounded-[2px] shadow-sm border border-charcoal/10 object-cover" />
+                  <img loading="lazy" decoding="async" src="/image/mq8k4f5h-gnnta7.webp" alt="O que é o Mês Missionário 360" className="w-full h-auto rounded-[2px] shadow-sm border border-charcoal/10 object-cover" />
                 </div>
                 <p className="font-sans text-lg text-sand/80 leading-relaxed mb-6">
                   É o fim das feijoadas improvisadas e dos apelos desesperados no altar. O Mês Missionário 360 é um sistema completo, previsível e validado de engajamento e arrecadação.
@@ -242,7 +244,7 @@ export default function Home() {
                     </p>
                     {item.image && (
                       <div className="mt-4 pl-4">
-                        <img src={item.image} alt={item.title} className="w-full h-auto rounded-[2px] shadow-sm border border-charcoal/10" />
+                        <img loading="lazy" decoding="async" src={item.image} alt={item.title} className="w-full h-auto rounded-[2px] shadow-sm border border-charcoal/10" />
                       </div>
                     )}
                   </li>
@@ -288,7 +290,7 @@ export default function Home() {
                     </p>
                     {item.image && (
                       <div className="mt-4 pl-4">
-                        <img src={item.image} alt={item.title} className="w-full h-auto rounded-[2px] shadow-sm border border-forest/10" />
+                        <img loading="lazy" decoding="async" src={item.image} alt={item.title} className="w-full h-auto rounded-[2px] shadow-sm border border-forest/10" />
                       </div>
                     )}
                   </li>
@@ -373,7 +375,7 @@ export default function Home() {
                 8 Benefícios para Sua Liderança
               </h2>
               <div className="w-full mb-12">
-                <img src="/image/mq8kzd91-9z1vim.webp" alt="8 Benefícios para Sua Liderança" className="w-full h-auto rounded-[2px] shadow-sm border border-charcoal/10 object-cover" />
+                <img loading="lazy" decoding="async" src="/image/mq8kzd91-9z1vim.webp" alt="8 Benefícios para Sua Liderança" className="w-full h-auto rounded-[2px] shadow-sm border border-charcoal/10 object-cover" />
               </div>
           </div>
 
@@ -435,7 +437,7 @@ export default function Home() {
                   O QUE VOCÊ TERÁ EM MÃOS IMEDIATAMENTE
                 </h2>
                 <div className="w-full mb-12">
-                  <img src="/image/mq8kcaq5-wjm6g9.webp" alt="O que você terá em mãos" className="w-full h-auto rounded-[2px] shadow-sm border border-charcoal/10 object-cover" />
+                  <img loading="lazy" decoding="async" src="/image/mq8kcaq5-wjm6g9.webp" alt="O que você terá em mãos" className="w-full h-auto rounded-[2px] shadow-sm border border-charcoal/10 object-cover" />
                 </div>
               <div className="w-20 h-1 bg-terracotta mx-auto mt-4"></div>
             </div>
@@ -574,7 +576,7 @@ export default function Home() {
               ].map((profile, idx) => (
                 <div key={idx} className="bg-sand p-8 border border-charcoal/10 rounded-[2px] hover:border-forest transition-colors duration-300">
                   <div className="w-full mb-6">
-                    <img src={profile.image} alt={profile.role} className="w-full h-auto object-cover rounded-[2px] shadow-sm border border-charcoal/10" />
+                    <img loading="lazy" decoding="async" src={profile.image} alt={profile.role} className="w-full h-auto object-cover rounded-[2px] shadow-sm border border-charcoal/10" />
                   </div>
                   <h3 className="font-serif text-lg font-bold text-charcoal mb-3 uppercase leading-snug">
                     {profile.role}
@@ -737,7 +739,7 @@ export default function Home() {
           <div className="border-2 border-forest p-8 md:p-12 bg-bone rounded-[2px] grid grid-cols-1 md:grid-cols-12 gap-8 items-center mb-20">
             <div className="md:col-span-3 flex justify-center">
               <div className="w-28 h-28 md:w-32 md:h-32">
-                <img src="/image/mq8kf1mq-pncto4.webp" alt="Garantia Incondicional" className="w-full h-full object-contain drop-shadow-sm" />
+                <img loading="lazy" decoding="async" src="/image/mq8kf1mq-pncto4.webp" alt="Garantia Incondicional" className="w-full h-full object-contain drop-shadow-sm" />
               </div>
             </div>
             <div className="md:col-span-9">
