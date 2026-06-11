@@ -31,6 +31,9 @@ export default function RootLayout({
       className={`${cinzel.variable} ${geist.variable} h-full antialiased scroll-smooth`}
     >
       <head>
+      </head>
+      <body className="min-h-full flex flex-col">
+        {children}
         <Script
           id="utmify-pixel"
           strategy="lazyOnload"
@@ -54,9 +57,6 @@ export default function RootLayout({
           data-utmify-ignore-iframe=""
           data-utmify-is-cartpanda=""
         />
-      </head>
-      <body className="min-h-full flex flex-col">
-        {children}
       </body>
     </html>
   );
