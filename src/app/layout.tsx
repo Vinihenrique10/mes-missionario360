@@ -27,6 +27,29 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${cinzel.variable} ${geist.variable} h-full antialiased scroll-smooth`}
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+  window.pixelId = "6a2a007dd1b06d9fda9a81f2";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+`,
+          }}
+        />
+        <script
+          src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+          data-utmify-prevent-xcod-sck=""
+          data-utmify-prevent-subids=""
+          data-utmify-ignore-iframe=""
+          data-utmify-is-cartpanda=""
+          async
+          defer
+        ></script>
+      </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
