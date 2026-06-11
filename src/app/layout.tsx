@@ -31,12 +31,9 @@ export default function RootLayout({
       className={`${cinzel.variable} ${geist.variable} h-full antialiased scroll-smooth`}
     >
       <head>
-      </head>
-      <body className="min-h-full flex flex-col">
-        {children}
         <Script
           id="utmify-pixel"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.pixelId = "6a2a007dd1b06d9fda9a81f2";
@@ -50,13 +47,16 @@ export default function RootLayout({
         />
         <Script
           id="utmify-latest"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
           src="https://cdn.utmify.com.br/scripts/utms/latest.js"
           data-utmify-prevent-xcod-sck=""
           data-utmify-prevent-subids=""
           data-utmify-ignore-iframe=""
           data-utmify-is-cartpanda=""
         />
+      </head>
+      <body className="min-h-full flex flex-col">
+        {children}
       </body>
     </html>
   );
